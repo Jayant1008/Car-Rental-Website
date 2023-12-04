@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.back{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("hgg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.head{
+    width: 85%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+
+}
+.head ul li{
+    list-style: none;
+    display: inline flex;
+    margin: 0 25px;
+    position: relative;
+}
+.head ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+.head ul li::after{
+    width: 0;
+    height: 3px;
+    background: rgb(67, 235, 238);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    content: "";
+    transition: 0.5s;
+}
+.head ul li:hover::after{
+    width: 100%;
+}
+
+.body{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: whitesmoke;
+    transform: translateY(-60%);
+}
+.body h2{
+    margin-top: 80px;
+    font-size: 48px;
+}
+.body p{
+    font-weight: 100;
+    line-height: 30px;
+    margin: 20px auto;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    border: solid 2px rgb(67,235,238);
+    border-radius: 23px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: rgb(67, 235, 238);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
